@@ -396,3 +396,18 @@ a[href^="tel:"] { white-space: nowrap; }
 @media (min-width: 901px) {
   .hero { padding: 64px 0 92px; }
 }
+
+/* Store photos */
+img { display: block; max-width: 100%; height: auto; }
+.hero { padding-bottom: 0; }
+.hero-photo { position: relative; z-index: 1; margin-top: 36px; background: #120c28; }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; display: block; }
+.gallery { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gallery figure { margin: 0; overflow: hidden; border-radius: 8px; background: #ece4d0; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+@media (max-width: 900px) {
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr; }
+}
